@@ -1,13 +1,13 @@
-import { useState } from 'react'
 import '@mantine/core/styles.css';
+
+import { Home } from "./Page/Home"
 
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-    <h1>Cypherx</h1>
+    <Home/>
     </>
   )
 }
