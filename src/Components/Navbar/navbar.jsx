@@ -1,14 +1,13 @@
-import { Autocomplete, Group, Burger, rem, Image } from '@mantine/core';
+import { Autocomplete, Group, Burger, rem, Image, Button } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { IconSearch } from '@tabler/icons-react';
 import classes from './navbar.module.css';
 import koinx from '../../assets/Images/koinx.png'
 
 const links = [
-{ link: '/about', label: 'Features' },
-{ link: '/pricing', label: 'Pricing' },
-{ link: '/learn', label: 'Learn' },
-{ link: '/community', label: 'Community' },
+{ link: '/crypto', label: 'Crypto Taxes' },
+{ link: '/pricing', label: 'Free Tools' },
+{ link: '/learn', label: 'Resource Center' },
 ];
 
 export function HeaderSearch() {
@@ -36,14 +35,11 @@ return (
         <Group>
         <Group ml={50} gap={5} className={classes.links} visibleFrom="sm">
             {items}
+            <Button
+            style={{borderRadius:'10px'}}
+            >Get Started</Button>
         </Group>
-        <Autocomplete
-            className={classes.search}
-            placeholder="Search"
-            leftSection={<IconSearch style={{ width: rem(16), height: rem(16) }} stroke={1.5} />}
-            data={['React', 'Angular', 'Vue', 'Next.js', 'Riot.js', 'Svelte', 'Blitz.js']}
-            visibleFrom="xs"
-        />
+    
         </Group>
     </div>
     </header>
